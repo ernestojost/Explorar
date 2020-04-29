@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: AvenirLT-Book;
+    src: url(assets/fonts/AvenirLT-Book.ttf);
+}
+@font-face {
+    font-family: AvenirLT-Medium;
+    src: url(assets/fonts/AvenirLT-Medium.ttf);
+}
+@font-face {
+    font-family: AvenirLT-Roman;
+    src: url(assets/fonts/AvenirLT-Roman.ttf);
+}
+@font-face {
+    font-family: Didot-Bold;
+    src: url(assets/fonts/Didot-Bold.ttf);
+}
+
+*{
+    font-family: Didot-Bold, "Helvetica";
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body{
+    background-color: #22293C;
+}
+
