@@ -111,3 +111,39 @@
     margin-top: 9px;
     letter-spacing: 2px;
 }
+
+#botonMenuMasOpciones{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    margin-left: 50px;
+    margin-top: 50px;
+    outline:none;
+}
+
+#panelMenuMasOpciones{
+    background-color: white;
+    position: absolute;
+    width: 542px;
+    height: 100%;
+}
+
+#botonCerrarPanel{
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 53.5px;
+    background-color: transparent;
+    border:none;
+}
+
+.explorarPanel{
+    margin-left: 27%;
+    margin-top: 48px;
+}
+
+.textoDidot{
+    color: black;
+    position: absolute;
+    font-size: 25px;
+    letter-spacing: 10px;
+}

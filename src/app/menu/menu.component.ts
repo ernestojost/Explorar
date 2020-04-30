@@ -73,6 +73,7 @@ export class MenuComponent implements OnInit{
     /* Carga de menú principal */
     function movimientoImagenes(){
       if(opacity > 100){
+        document.getElementById("botonMenuMasOpciones").style.cursor = "pointer";
         clearInterval(id_movimiento_imagenes);
       }else{
         opcionAventura.style.opacity = opacity + '%';
