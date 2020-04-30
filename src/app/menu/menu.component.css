@@ -1,4 +1,5 @@
-#contenido{
+/* Pantalla de carga */
+#pantalla_carga{
     display: block;
     margin: 43vh auto;
 }
@@ -23,4 +24,63 @@
     height:3px;
     width:0%;
     background-color: white;
+}
+
+
+/* Menú principal */
+#menu_principal{
+    display: none;
+    height: 100vh;
+}
+
+#menu_principal .menu{
+    flex-basis: calc(100% / 3);
+    height: 100vh;
+    border: none;
+    overflow: hidden;
+}
+
+#menu_principal .menu:hover{
+    background-color: red;
+}
+
+#menu_principal #aventura{
+    opacity: 0%;
+}
+
+#menu_principal #aventura #imagenAventura{
+    background-image: url("../../assets/img/cascada.png");
+    transform: scale(2);
+    background-position: 50% 0%;
+    height: 100vh;
+    clear: both;
+}
+
+#menu_principal #romantico{
+    opacity: 0%;
+}
+
+#menu_principal #romantico #imagenRomantico{
+    background-image: url("../../assets/img/Venecia.jpg");
+    transform: scale(2);
+    background-position: 50% 0%;
+    clear: both;
+    height: 100vh;
+}
+
+#menu_principal #solyplaya{
+    opacity: 0%;
+}
+
+#menu_principal #solyplaya #imagenSolYPlaya{
+    background-image: url("../../assets/img/Islas.jpg");
+    transform: scale(2);
+    clear: both;
+    height: 100vh;
+}
+
+#menu_principal #fondoNegroAventura{
+    opacity: 0%;
+    height: 100%;
+    background-color: rgba(34, 41, 60, 0.70);
 }
