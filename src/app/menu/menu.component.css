@@ -35,13 +35,9 @@
 
 #menu_principal .menu{
     flex-basis: calc(100% / 3);
-    height: 100vh;
+    height: 100%;
     border: none;
     overflow: hidden;
-}
-
-#menu_principal .menu:hover{
-    background-color: red;
 }
 
 #menu_principal #aventura{
@@ -50,22 +46,36 @@
 
 #menu_principal #aventura #imagenAventura{
     background-image: url("../../assets/img/cascada.png");
+    background-repeat: no-repeat;
     transform: scale(2);
     background-position: 50% 0%;
     height: 100vh;
     clear: both;
 }
 
-#menu_principal #romantico{
+#menu_principal #fondoNegroAventura{
+    opacity: 0%;
+    height: 100%;
+    background-color: rgba(34, 41, 60, 0.70);
+}
+
+#menu_principal #romance{
     opacity: 0%;
 }
 
-#menu_principal #romantico #imagenRomantico{
+#menu_principal #romance #imagenRomance{
     background-image: url("../../assets/img/Venecia.jpg");
+    background-repeat: no-repeat;
     transform: scale(2);
     background-position: 50% 0%;
     clear: both;
-    height: 100vh;
+    height: 100%;
+}
+
+#menu_principal #fondoNegroRomance{
+    opacity: 0%;
+    height: 100%;
+    background-color: rgba(34, 41, 60, 0.70);
 }
 
 #menu_principal #solyplaya{
@@ -74,13 +84,30 @@
 
 #menu_principal #solyplaya #imagenSolYPlaya{
     background-image: url("../../assets/img/Islas.jpg");
+    background-repeat: no-repeat;
     transform: scale(2);
     clear: both;
-    height: 100vh;
+    height: 100%;
 }
 
-#menu_principal #fondoNegroAventura{
+#menu_principal #fondoNegroSolYPlaya{
     opacity: 0%;
     height: 100%;
     background-color: rgba(34, 41, 60, 0.70);
+}
+
+.contenidoFondoNegro{
+    padding: 43vh 0px;
+}
+
+.textoDentroDeOpcion{
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.textoTresOpciones{
+    font-family: AvenirLT-Book;
+    font-size: 14px;
+    margin-top: 9px;
+    letter-spacing: 2px;
 }

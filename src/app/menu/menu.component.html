@@ -6,19 +6,34 @@
 </div>
 
 <div id="menu_principal">
-    <button id="aventura" class="menu">
+    <button id="aventura" class="menu" (mouseover)="overMostrarOpcionAventura()" (mouseleave)="leaveMostrarOpcionAventura()">
         <div id="imagenAventura">
-            <div id="fondoNegroAventura"></div>
+            <div id="fondoNegroAventura">
+                <div class="contenidoFondoNegro">
+                    <p class="textoDentroDeOpcion">AVENTURA</p>
+                    <p class="textoTresOpciones">3 OPCIONES</p>
+                </div>
+            </div>
         </div>
     </button>
-    <button id="romantico" class="menu">
-        <div id="imagenRomantico">
-            <div id="fondoNegroRomantico"></div>
+    <button id="romance" class="menu" (mouseover)="overMostrarOpcionRomance()" (mouseleave)="leaveMostrarOpcionRomance()">
+        <div id="imagenRomance">
+            <div id="fondoNegroRomance">
+                <div class="contenidoFondoNegro">
+                    <p class="textoDentroDeOpcion">ROMANCE</p>
+                    <p class="textoTresOpciones">3 OPCIONES</p>
+                </div>
+            </div>
         </div>
     </button>
-    <button id="solyplaya" class="menu">
+    <button id="solyplaya" class="menu" (mouseover)="overMostrarOpcionSolYPlaya()" (mouseleave)="leaveMostrarOpcionSolYPlaya()">
         <div id="imagenSolYPlaya">
-            <div id="fondoNegroSolYPlaya"></div>
+            <div id="fondoNegroSolYPlaya">
+                <div class="contenidoFondoNegro">
+                    <p class="textoDentroDeOpcion">SOL Y PLAYA</p>
+                    <p class="textoTresOpciones">3 OPCIONES</p>
+                </div>
+            </div>
         </div>
     </button>
 </div>
