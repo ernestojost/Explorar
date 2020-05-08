@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PanelMenuComponent } from '../panel-menu/panel-menu.component';
 
 @Component({
+  providers:[PanelMenuComponent],
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
@@ -11,25 +13,13 @@ export class MenuComponent implements OnInit{
   public id_mostrarContenidoOpcionRomance;
   public id_mostrarContenidoOpcionSolYPlaya;
 
-  constructor() {
-    
-  }
+  constructor(private panelComp: PanelMenuComponent) { }
 
   ngOnInit(): void {
 
 
     /* Crear y capturar elementos */
 
-    /* Pantalla de carga */
-    var barra_progreso = document.getElementById("barra-progreso");  
-    var pantalla_carga = document.getElementById("pantalla_carga");
-    var menu_principal = document.getElementById("menu_principal"); 
-    var id = setInterval(frame, 10);
-    var width = 0;
-    var opacity = 140;
-    var contador = 1;
-
-    /* Menú principal */
     var id_movimiento_imagenes;
     var opcionAventura = document.getElementById("aventura");
     var opcionRomance = document.getElementById("romance");
@@ -38,39 +28,21 @@ export class MenuComponent implements OnInit{
     var imagenRomance = document.getElementById("imagenRomance");
     var imagenSolYPlaya = document.getElementById("imagenSolYPlaya");
     var scale = 2;
+    var opacity = 0;
+
+    var menu_principal = document.getElementById("menu_principal"); 
 
     /* FIN Crear y capturar elementos */
-    
-    /* Funcionamiento barra de progreso de la pantalla de carga */
-    function frame() {
-      if (width >= 100) {
-        if (opacity <= 100){
-          pantalla_carga.style.opacity = opacity + '%';
-        }
-        opacity--;
-        if (opacity < 0){
-          clearInterval(id);
-          pantalla_carga.style.display = "none";
-          menu_principal.style.display = "flex";
-          opacity = 0;
-          id_movimiento_imagenes = setInterval(movimientoImagenes, 10);
-        }
-      } else {
-        width = width + contador/100;
-        if (width <= 50){
-          contador = contador * 1.10; 
-        } else {
-          contador = contador / 1.10; 
-        }
-        barra_progreso.style.width = width + '%'; 
-      }
-    }
-
-    /* FIN Funcionamiento barra de progreso de la pantalla de carga */
 
 
 
     /* Carga de menú principal */
+
+    menu_principal.style.display = "flex";
+
+    id_movimiento_imagenes = setInterval(movimientoImagenes, 10);
+
+    // Funcion que hace el movimiento de las imágenes cuando carga el componente
     function movimientoImagenes(){
       if(opacity > 100){
         document.getElementById("botonMenuMasOpciones").style.cursor = "pointer";
@@ -95,7 +67,8 @@ export class MenuComponent implements OnInit{
 
 
 
-  /* Al pasar ratón por encima de opciones */
+  /* Al pasar ratón por encima de opciones entra al over, al salir entra a leave */
+
   overMostrarOpcionAventura(){
     if(document.getElementById("imagenAventura").style.transform == "scale("+1.005+")"){
       document.getElementById("aventura").style.cursor = "pointer";
@@ -205,5 +178,15 @@ export class MenuComponent implements OnInit{
   }
 
   /* FIN Al pasar ratón por encima de opciones */
+
+
+
+  /* Funcion que se llama al clickear el boton de botonMenuMasOpciones */
+
+  abrirPanel(){
+    this.panelComp.cargarPanel();
+  }
+
+
 
 }

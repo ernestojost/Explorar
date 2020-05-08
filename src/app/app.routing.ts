@@ -3,13 +3,15 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Importar componentes
-import { MenuComponent } from './menu/menu.component'
+import { MenuComponent } from './components/menu/menu.component';
+import { CargaMenuComponent } from './components/carga-menu/carga-menu.component';
 
 
 // Array de rutas
 const appRoutes: Routes = [
-    {path: '', component: MenuComponent},
-    {path: '**', component: MenuComponent}
+    {path: '', component: CargaMenuComponent},
+    {path: 'menu', component: MenuComponent},
+    {path: '**', component: CargaMenuComponent}
 ];
 
 // Exportar el modulo del router
